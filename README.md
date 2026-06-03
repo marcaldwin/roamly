@@ -1,16 +1,68 @@
-# roamly
+# Roamly
 
-A new Flutter project.
+Roamly is a real-world exploration app where users reveal fog-covered map areas, unlock special places they physically visit, save memories, and share selected discoveries with friends.
 
-## Getting Started
+## Project Status
 
-This project is a starting point for a Flutter application.
+Currently in early development.
 
-A few resources to get you started if this is your first Flutter project:
+## Platform
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Android first
+- iOS later
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+- Flutter
+- Supabase
+- PostgreSQL
+- MapLibre
+- OpenStreetMap
+- SQLite / Hive for local cache
+
+## Core Features
+
+- User login and registration
+- Real-world map
+- Fog-of-war map exploration
+- Journey Mode for revealing map areas
+- Special place unlocks using GPS
+- City/area completion progress
+- Private memory photos
+- Friend system
+- Shared places
+- Likes and comments
+
+## MVP Scope
+
+The first version focuses on:
+
+- Android app
+- Kidapawan test area
+- Map exploration
+- Fog reveal
+- Special place unlock
+- Basic profile
+- Friends
+- Sharing selected places
+
+## Version 2 Ideas
+
+- Public live location toggle
+- Nearby people discovery
+- Chat
+- Reactions
+- Badges
+- Leaderboards
+- QR unlock
+- Photo proof unlock
+- Public photo gallery
+- iOS version
+
+## Development
+
+This project is built using Flutter.
+
+```bash
+flutter pub get
+flutter run
