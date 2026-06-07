@@ -7,8 +7,9 @@ class AuthService {
 
   User? get currentUser => _supabase.auth.currentUser;
 
-  Stream<AuthState> get authStateChanges =>
-      _supabase.auth.onAuthStateChange;
+  Session? get currentSession => _supabase.auth.currentSession;
+
+  Stream<AuthState> get authStateChanges => _supabase.auth.onAuthStateChange;
 
   Future<AuthResponse> register({
     required String email,
@@ -19,10 +20,7 @@ class AuthService {
     return _supabase.auth.signUp(
       email: email,
       password: password,
-      data: {
-        'username': username,
-        'display_name': displayName,
-      },
+      data: {'username': username, 'display_name': displayName},
     );
   }
 
@@ -30,10 +28,7 @@ class AuthService {
     required String email,
     required String password,
   }) {
-    return _supabase.auth.signInWithPassword(
-      email: email,
-      password: password,
-    );
+    return _supabase.auth.signInWithPassword(email: email, password: password);
   }
 
   Future<void> logout() {
