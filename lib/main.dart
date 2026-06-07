@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:roamly/app/roamly_test_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+import 'app/roamly_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,5 +14,5 @@ Future<void> main() async {
     publishableKey: dotenv.env['SUPABASE_ANON_KEY']!,
   );
 
-  runApp(const RoamlyTestApp());
+  runApp(const RoamlyApp());
 }
